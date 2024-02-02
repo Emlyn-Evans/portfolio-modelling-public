@@ -31,7 +31,7 @@ except ModuleNotFoundError as e:
     )
 
     subprocess.Popen([
-        f"{sys.executable} -m pip install git+https://${{github_token}}@github.com/{github_username}/{package_name}.git"],
+        f"{sys.executable} -m pip install git+https://${{github_token}}@github.com/{github_username}/{package_name}.git --user"],
         shell=True)
     # git+https://<Token>@github.com/Emlyn-Evans/portfolio_modelling_private.git
 
