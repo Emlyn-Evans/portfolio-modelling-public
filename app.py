@@ -24,16 +24,16 @@ try:
 # This block executes only on the first run when your package isn't installed
 except ModuleNotFoundError as e:
     sleep_time = 10
-    package_name = 'portfolio_modelling_private'
+    package_name = 'portfolio-modelling-private'
     github_username = 'Emlyn-Evans'
     dependency_warning = st.warning(
         f"Installing dependencies, this takes {sleep_time} seconds."
     )
 
     subprocess.Popen([
-        f"{sys.executable} -m pip install git+https://{github_username}:${{github_token}}@github.com/{github_username}/{package_name}.git"],
+        f"{sys.executable} -m pip install git+https://${{github_token}}@github.com/{github_username}/{package_name}.git"],
         shell=True)
-    # git+https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/user/project.git
+    # git+https://<Token>@github.com/Emlyn-Evans/portfolio_modelling_private.git
 
     # Wait for subprocess to install package before running your actual code below
     time.sleep(sleep_time)
