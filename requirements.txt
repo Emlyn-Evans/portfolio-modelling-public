@@ -1,0 +1,5 @@
+# Add packages here for Streamlit Cloud to install on booting up.
+streamlit-authenticator==0.3.1
+Pillow==9.4.0
+pandas==2.1.4
+plotly==5.9.0
